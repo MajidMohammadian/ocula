@@ -1,0 +1,214 @@
+@import "main.css";
+
+.login-box {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-selector {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 0 10px 1px #ddd;
+    height: 400px;
+
+    > img {
+        width: 28px;
+        margin-bottom: 3rem;
+        padding-top: 3rem;
+    }
+
+    > div {
+        > div {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 30px 20px;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                background-color: var(--primary-color);
+                width: 5px;
+                height: 0;
+                position: absolute;
+                left: 0;
+                border-radius: 0 30px 30px 0;
+                transition: .2s all;
+            }
+
+            &.active {
+                &:before {
+                    height: 100%;
+                    transition: .2s all;
+                }
+            }
+
+            img {
+                width: 30px;
+                margin-bottom: 1rem;
+            }
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+#login-main {
+    > div {
+        position: relative;
+        display: none;
+
+        &.active {
+            display: block;
+            overflow: hidden;
+        }
+
+        img {
+            width: 540px;
+            height: 550px;
+            border-radius: 6px;
+        }
+    }
+
+    > div[data-type="sign-in"] {
+        img {}
+        h2 {
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            color: #fff;
+        }
+        span {
+            position: absolute;
+            top: 85px;
+            left: 60px;
+            color: #fff;
+        }
+    }
+
+    > div[data-type="sign-up"] {
+        img {}
+        h2 {
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            color: #fff;
+        }
+        span {
+            position: absolute;
+            top: 85px;
+            left: 60px;
+            color: #fff;
+        }
+    }
+
+    > div[data-type="success"] {
+        img {}
+        h2, span, b, div {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+        }
+        h2 {
+            top: 40px;
+            font-size: 50px;
+        }
+        span {
+            bottom: 160px;
+            font-size: 1.3rem;
+        }
+        b {
+            bottom: 130px;
+        }
+        div {
+            bottom: 65px;
+
+            button {
+                background-color: #201568;
+                color: #fff;
+                border: 0;
+                padding: 7px 90px;
+                border-radius: 6px;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+#login-entry {
+    height: 400px;
+    width: 340px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 0 10px 1px #ddd;
+
+    > div {
+        position: relative;
+        display: none;
+
+        &.active {
+            display: block;
+            border-radius: 0 6px 6px 0;
+            overflow: hidden;
+        }
+    }
+
+    > div[data-type="sign-in"] {
+        > .info {
+            span {
+                font-size: 14px;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+        > .form {
+            div {
+                font-size: 14px;
+                margin-top: 1rem;
+
+                label {
+                    display: block;
+                    font-weight: 500;
+                }
+                input {
+
+                }
+            }
+            button {
+                width: 100%;
+                margin-top: 2rem;
+                background-color: #201568;
+                color: #fff;
+                border: 0;
+                padding: 10px;
+                border-radius: 0.25rem;;
+            }
+        }
+        > .comment {
+            font-size: 0.6rem;
+            margin-top: 1rem;
+            text-align: justify;
+        }
+    }
+}
