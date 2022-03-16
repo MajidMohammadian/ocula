@@ -143,7 +143,7 @@
   border-radius: 0 6px 6px 0;
   overflow: hidden;
 }
-#login-entry > div[data-type=sign-in] > .info span {
+#login-entry > div[data-type=sign-in] > .info {
   font-size: 14px;
 }
 #login-entry > div[data-type=sign-in] > .info a {
@@ -157,14 +157,31 @@
   display: block;
   font-weight: 500;
 }
-#login-entry > div[data-type=sign-in] > .form button {
-  width: 100%;
+#login-entry > div[data-type=sign-in] > .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 2rem;
+}
+#login-entry > div[data-type=sign-in] > .button button {
+  width: 100%;
   background-color: #201568;
   color: #fff;
   border: 0;
   padding: 10px;
   border-radius: 0.25rem;
+}
+#login-entry > div[data-type=sign-in] > .button a {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #20156817;
+  border-radius: 0.25rem;
+  margin-left: 15px;
+  padding: 4px;
+}
+#login-entry > div[data-type=sign-in] > .button a img {
+  width: 26px;
+  height: 26px;
 }
 #login-entry > div[data-type=sign-in] > .comment {
   font-size: 0.6rem;

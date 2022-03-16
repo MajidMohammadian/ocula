@@ -175,8 +175,9 @@
 
     > div[data-type="sign-in"] {
         > .info {
+            font-size: 14px;
+
             span {
-                font-size: 14px;
             }
             a {
                 text-decoration: none;
@@ -195,14 +196,33 @@
 
                 }
             }
+        }
+        > .button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+
             button {
                 width: 100%;
-                margin-top: 2rem;
                 background-color: #201568;
                 color: #fff;
                 border: 0;
                 padding: 10px;
                 border-radius: 0.25rem;;
+            }
+            a {
+                width: 35px;
+                height: 35px;
+                border: 1px solid #20156817;
+                border-radius: 0.25rem;
+                margin-left: 15px;
+                padding: 4px;
+
+                img {
+                    width: 26px;
+                    height: 26px;
+                }
             }
         }
         > .comment {
