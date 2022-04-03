@@ -44,4 +44,17 @@ $(document).ready(function(){
             $(this).html('<i class="i-btn-loading"></i>')
         }
     })
+
+    $(document).on('click', 'i[data-type="password"]', function(){
+        if($(this).hasClass('i-eye-close')) {
+            $(this).parent().children('input[type="password"]').attr('type', 'text')
+        } else {
+            $(this).parent().children('input[type="text"]').attr('type', 'password')
+        }
+        $(this).toggleClass('i-eye i-eye-close').parent().children('input').focus()
+    })
+
+    $(document).on('click', 'i[for="sign-in-email"]', function(){
+        $('#sign-in-email').focus()
+    })
 })

@@ -52,12 +52,39 @@
                 <div class="form">
                     <div>
                         <label for="sign-in-email">E-Mail</label>
-                        <input type="email" id="sign-in-email" class="form-control">
+                        <input type="email" id="sign-in-email" class="form-control" tabindex="1">
+                        <i class="i-email" for="sign-in-email"></i>
                         <span id="error-sign-in-email">email not found</span>
                     </div>
                     <div>
                         <label for="sign-in-password">Password</label>
-                        <input type="password" id="sign-in-password" class="form-control">
+                        <input type="password" id="sign-in-password" class="form-control" tabindex="2">
+                        <i class="i-eye-close" data-type="password"></i>
+                        <button id="btn-forget">Forget your password?</button>
+                    </div>
+                </div>
+                <div class="button">
+                    <button id="btn-sign-in" tabindex="3">SIGN IN</button>
+                    <a href="javascript:void(0)" class="btn-google">
+                        <i class="i-google"></i>
+                    </a>
+                </div>
+                <div class="comment">By clicking the Sign In Button you therefore agree to the Privacy Policy For more information, read about our privacy hear.</div>
+            </div>
+            <div data-type="sign-up">
+                <div class="info">
+                    <h1>Sign Up</h1>
+                    <span id="error-sign-up">form not validate</span>
+                </div>
+                <div class="form">
+                    <div>
+                        <label for="sign-in-email">E-Mail</label>
+                        <input type="email" id="sign-up-email" class="form-control">
+                        <span id="error-sign-up-email">email not found</span>
+                    </div>
+                    <div>
+                        <label for="sign-in-password">Password</label>
+                        <input type="password" id="sign-up-password" class="form-control">
                         <button>Forget your password?</button>
                     </div>
                 </div>
@@ -68,11 +95,6 @@
                     </a>
                 </div>
                 <div class="comment">By clicking the Sign In Button you therefore agree to the Privacy Policy For more information, read about our privacy hear.</div>
-            </div>
-            <div data-type="sign-up">
-                <div class="info">
-                    <h1>Sign Up</h1>
-                </div>
             </div>
         </div>
     </div>
