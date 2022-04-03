@@ -10,14 +10,14 @@
 <body>
     <div class="login-box">
         <div id="login-selector">
-            <img src="svg/bookmark.svg">
+            <i class="i-selector"></i>
             <div>
                 <div data-type="sign-in" class="active">
-                    <img src="svg/login.svg" alt="Sign In">
+                    <i class="i-sign-in"></i>
                     <span>Sign In</span>
                 </div>
                 <div data-type="sign-up">
-                    <img src="svg/register.svg" alt="Sign Up">
+                    <i class="i-sign-up"></i>
                     <span>Sign Up</span>
                 </div>
             </div>
@@ -26,12 +26,12 @@
             <div data-type="sign-in" class="active">
                 <img src="image/sign-in.png" alt="Sign In">
                 <h2>Start Your Journey.</h2>
-                <span>Experience life again.</span>
+                <span class="typing" data-text="Experience life again."></span>
             </div>
             <div data-type="sign-up">
                 <img src="image/sign-up.png" alt="Sign Up">
                 <h2>Sign Up Now.</h2>
-                <span>Sign Up Ocula for free</span>
+                <span class="typing" data-text="Sign Up Ocula for free."></span>
             </div>
             <div data-type="success">
                 <img src="image/success.png" alt="Success">
@@ -46,29 +46,33 @@
         <div id="login-entry">
             <div data-type="sign-in" class="active">
                 <div class="info">
-                    <span>Don't have an account?</span>
-                    <a href="javascript:void(0)">Sign Up.</a>
+                    <h1>Sign In</h1>
+                    <span id="error-sign-in">form not validate</span>
                 </div>
                 <div class="form">
                     <div>
                         <label for="sign-in-email">E-Mail</label>
                         <input type="email" id="sign-in-email" class="form-control">
+                        <span id="error-sign-in-email">email not found</span>
                     </div>
                     <div>
                         <label for="sign-in-password">Password</label>
                         <input type="password" id="sign-in-password" class="form-control">
+                        <button>Forget your password?</button>
                     </div>
                 </div>
                 <div class="button">
                     <button>SIGN IN</button>
-                    <a href="javascript:void(0)">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE3MiAxNzIiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNi4zNCwtMTYuMzQpIHNjYWxlKDEuMTksMS4xOSkiPjxwYXRoIGZpbGw9IiNmZmMxMDciIGQ9Ik0xNTYuMjcyNzUsNzEuOTY0MDhoLTUuNzcyNzV2LTAuMjk3NDJoLTY0LjV2MjguNjY2NjdoNDAuNTAyNDJjLTUuOTA4OTIsMTYuNjg3NTggLTIxLjc4NjY3LDI4LjY2NjY3IC00MC41MDI0MiwyOC42NjY2N2MtMjMuNzQ2NzUsMCAtNDMsLTE5LjI1MzI1IC00MywtNDNjMCwtMjMuNzQ2NzUgMTkuMjUzMjUsLTQzIDQzLC00M2MxMC45NjE0MiwwIDIwLjkzMzgzLDQuMTM1MTcgMjguNTI2OTIsMTAuODg5NzVsMjAuMjcwOTIsLTIwLjI3MDkyYy0xMi43OTk2NywtMTEuOTI4OTIgLTI5LjkyMDgzLC0xOS4yODU1IC00OC43OTc4MywtMTkuMjg1NWMtMzkuNTc3OTIsMCAtNzEuNjY2NjcsMzIuMDg4NzUgLTcxLjY2NjY3LDcxLjY2NjY3YzAsMzkuNTc3OTIgMzIuMDg4NzUsNzEuNjY2NjcgNzEuNjY2NjcsNzEuNjY2NjdjMzkuNTc3OTIsMCA3MS42NjY2NywtMzIuMDg4NzUgNzEuNjY2NjcsLTcxLjY2NjY3YzAsLTQuODA1MjUgLTAuNDk0NSwtOS40OTU4MyAtMS4zOTM5MiwtMTQuMDM1OTJ6Ii8+PHBhdGggZmlsbD0iI2ZmM2QwMCIgZD0iTTIyLjU5NjUsNTIuNjQyNzVsMjMuNTQ2MDgsMTcuMjY4MDhjNi4zNzExNywtMTUuNzczODMgMjEuODAxLC0yNi45MTA4MyAzOS44NTc0MiwtMjYuOTEwODNjMTAuOTYxNDIsMCAyMC45MzM4Myw0LjEzNTE3IDI4LjUyNjkyLDEwLjg4OTc1bDIwLjI3MDkyLC0yMC4yNzA5MmMtMTIuNzk5NjcsLTExLjkyODkyIC0yOS45MjA4MywtMTkuMjg1NSAtNDguNzk3ODMsLTE5LjI4NTVjLTI3LjUyNzE3LDAgLTUxLjM5OTMzLDE1LjU0MDkyIC02My40MDM1LDM4LjMwOTQyeiIvPjxwYXRoIGZpbGw9IiM0Y2FmNTAiIGQ9Ik04NiwxNTcuNjY2NjdjMTguNTExNSwwIDM1LjMzMTY3LC03LjA4NDI1IDQ4LjA0ODkyLC0xOC42MDQ2N2wtMjIuMTgwODMsLTE4Ljc2OTVjLTcuMTk1MzMsNS40NTAyNSAtMTYuMTM5MzMsOC43MDc1IC0yNS44NjgwOCw4LjcwNzVjLTE4LjY0MDUsMCAtMzQuNDY4MDgsLTExLjg4NTkyIC00MC40MzA3NSwtMjguNDczMTdsLTIzLjM3MDUsMTguMDA2MjVjMTEuODYwODMsMjMuMjA5MjUgMzUuOTQ4LDM5LjEzMzU4IDYzLjgwMTI1LDM5LjEzMzU4eiIvPjxwYXRoIGZpbGw9IiMxOTc2ZDIiIGQ9Ik0xNTYuMjcyNzUsNzEuOTY0MDhoLTUuNzcyNzV2LTAuMjk3NDJoLTY0LjV2MjguNjY2NjdoNDAuNTAyNDJjLTIuODM4LDguMDE1OTIgLTcuOTk0NDIsMTQuOTI4MTcgLTE0LjY0NTA4LDE5Ljk2Mjc1YzAuMDAzNTgsLTAuMDAzNTggMC4wMDcxNywtMC4wMDM1OCAwLjAxMDc1LC0wLjAwNzE3bDIyLjE4MDgzLDE4Ljc2OTVjLTEuNTY5NSwxLjQyNjE3IDIzLjYxNzc1LC0xNy4yMjUwOCAyMy42MTc3NSwtNTMuMDU4NDJjMCwtNC44MDUyNSAtMC40OTQ1LC05LjQ5NTgzIC0xLjM5MzkyLC0xNC4wMzU5MnoiLz48L2c+PC9zdmc+" alt="">
+                    <a href="javascript:void(0)" class="btn-google">
+                        <i class="i-google"></i>
                     </a>
                 </div>
                 <div class="comment">By clicking the Sign In Button you therefore agree to the Privacy Policy For more information, read about our privacy hear.</div>
             </div>
             <div data-type="sign-up">
-                sign up
+                <div class="info">
+                    <h1>Sign Up</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -76,6 +80,7 @@
     <!-- script -->
     <script type="text/javascript" src="plugin/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="plugin/typing-effect.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>
