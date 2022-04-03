@@ -318,13 +318,17 @@
                     color: var(--error-color);
                 }
                 input {
-
+                    padding-right: 35px;
+                    height: 38px;
+                    font-size: 13px;
                 }
-                input[type="email"]:before {
-                    content:'';
-                }
-                input[type="password"]:before {
-                    content:'';
+                i {
+                    position: absolute;
+                    right: 10px;
+                    bottom: 9px;
+                    width: 20px;
+                    opacity: 0.7;
+                    cursor: pointer;
                 }
                 button {
                     font-size: 10px;

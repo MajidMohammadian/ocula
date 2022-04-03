@@ -45,6 +45,14 @@ $(document).ready(function(){
         }
     })
 
+    $(document).on('click', '#login-entry > div[data-type="sign-up"] .button > button', function(){
+        if($('#login-entry > div[data-type="sign-up"] .button > button > *').length > 0) {
+            $(this).html('SIGN UP')
+        } else {
+            $(this).html('<i class="i-btn-loading"></i>')
+        }
+    })
+
     $(document).on('click', 'i[data-type="password"]', function(){
         if($(this).hasClass('i-eye-close')) {
             $(this).parent().children('input[type="password"]').attr('type', 'text')

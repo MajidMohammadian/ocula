@@ -274,11 +274,18 @@
   font-size: 11px;
   color: var(--error-color);
 }
-#login-entry > div[data-type=sign-up] > .form div input[type=email]:before {
-  content: "";
+#login-entry > div[data-type=sign-up] > .form div input {
+  padding-right: 35px;
+  height: 38px;
+  font-size: 13px;
 }
-#login-entry > div[data-type=sign-up] > .form div input[type=password]:before {
-  content: "";
+#login-entry > div[data-type=sign-up] > .form div i {
+  position: absolute;
+  right: 10px;
+  bottom: 9px;
+  width: 20px;
+  opacity: 0.7;
+  cursor: pointer;
 }
 #login-entry > div[data-type=sign-up] > .form div button {
   font-size: 10px;
